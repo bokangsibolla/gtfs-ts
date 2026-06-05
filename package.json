@@ -1,0 +1,59 @@
+{
+  "name": "gtfs-ts",
+  "version": "0.1.0",
+  "description": "A modern TypeScript library to parse, query, and validate GTFS public-transit feeds.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "gtfs-ts": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "dev": "tsx src/cli.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "gtfs",
+    "gtfs-validator",
+    "transit",
+    "public-transport",
+    "parser",
+    "validator",
+    "typescript",
+    "mobilitydata"
+  ],
+  "author": "Bokang Sibolla",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bokangsibolla/gtfs-ts.git"
+  },
+  "homepage": "https://github.com/bokangsibolla/gtfs-ts#readme",
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "fflate": "^0.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vitest": "^4.1.8"
+  }
+}
