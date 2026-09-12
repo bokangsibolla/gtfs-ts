@@ -39,6 +39,14 @@ npm run build     # tsc -> dist/
 npm publish
 ```
 
+## Verification
+
+Run before claiming a change is done, and show the passing output:
+
+```bash
+npm run build && npm test
+```
+
 ## Conventions
 
 - Every parser and query function is pure and synchronous. The only I/O is `downloadGtfs`. Keep it that way: new logic stays pure and testable, with downloading isolated to `download.ts`.
